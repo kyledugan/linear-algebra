@@ -1,9 +1,15 @@
 import numpy as np
 
 def laff_zerov(m):
-    for i in range(m.shape[0]):
-        for j in range(m.shape[1]):
+    if len(m.shape) < 2:
+        rows = 1
+        columns = m.shape[0]
+    else:
+        rows = m.shape[0]
+        columns = m.shape[1]
+    for i in range(rows):
+        for j in range(columns):
             m[i][j] = 0
     return m
 
-print(laff_zerov(np.array([[3,1,1],[2,1,1]])))
+# print(laff_zerov(np.array([[3,1,1],[2,1,1]])))

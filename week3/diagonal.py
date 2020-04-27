@@ -2,7 +2,7 @@ import numpy as np
 
 def diagonal(A,x):
     # check for 2D matrix
-    if len(A.shape) < 2 or len(x.shape) < 2:
+    if len(A.shape) != 2 or len(x.shape) != 2:
         return "FAILED"
     # check that A is n x n matrix and x is a column vector
     if A.shape[0] != A.shape[1] or x.shape[1] != 1:

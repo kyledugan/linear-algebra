@@ -3,7 +3,7 @@ from zerov import zerov
 
 def identity(x):
     # check that A is n x n matrix
-    if len(x.shape) < 2 or x.shape[0] != x.shape[1]:
+    if len(x.shape) != 2 or x.shape[0] != x.shape[1]:
         return "FAILED"
     for i in range(x.shape[0]):
         x[:i, i] = zerov(np.array([x[:i, i]])) #a01

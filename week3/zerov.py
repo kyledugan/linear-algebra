@@ -1,7 +1,7 @@
 import numpy as np
 
 def zerov(m):
-    if len(m.shape) < 2:
+    if len(m.shape) == 1:
         rows = 1
         columns = m.shape[0]
     else:

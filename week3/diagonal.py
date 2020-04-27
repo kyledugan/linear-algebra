@@ -1,6 +1,6 @@
 import numpy as np
 
-def laff_diagonal(A,x):
+def diagonal(A,x):
     # check for 2D matrix
     if len(A.shape) < 2 or len(x.shape) < 2:
         return "FAILED"
@@ -19,4 +19,4 @@ def laff_diagonal(A,x):
 
 A = np.array([[1,2,3],[4,5,6],[7,8,9]])
 x = np.array([[10],[11],[12]])
-print(laff_diagonal(A,x))
+print(diagonal(A,x))

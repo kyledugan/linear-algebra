@@ -1,6 +1,6 @@
 import numpy as np
 
-def laff_axpy(alpha,x,y):
+def axpy(alpha,x,y):
     # check that 2D arrays are passed in
     if len(x.shape) != 2 or len(y.shape) != 2:
         return 'FAILED'
@@ -38,4 +38,4 @@ x = np.array([[1,2,3]])
 y = np.array([[4,5,6]])
 z = np.array([[7],[8],[9]])
 zz = np.array([[10], [11], [12]])
-print(laff_axpy(3,zz,x))
+print(axpy(3,zz,x))

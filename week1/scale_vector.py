@@ -1,6 +1,6 @@
 import numpy as np
 
-def laff_scale(alpha,x):
+def scale_vector(alpha,x):
     # check that a 2D array is passed in
     if len(x.shape) != 2:
         return 'FAILED'
@@ -27,4 +27,4 @@ def laff_scale(alpha,x):
 x = np.array([[1,2,3]])
 y = np.array([4,5,6])
 z = np.array([[7],[8],[9]])
-print(laff_scale(2, y))
+print(scale_vector(2, y))

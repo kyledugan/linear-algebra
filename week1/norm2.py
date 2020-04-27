@@ -1,8 +1,8 @@
 import numpy as np
-from laff_dot import laff_dot
+from dot import dot
 
-def laff_norm2(x):
-    return laff_dot(x,x) ** 0.5
+def norm2(x):
+    return dot(x,x) ** 0.5
 
     # check that a 2D array is passed in
     # if len(x.shape) != 2:
@@ -27,5 +27,5 @@ def laff_norm2(x):
 x = np.array([[1,5]])
 y = np.array([[4,5,6]])
 z = np.array([[7],[8],[9]])
-print(laff_norm2(x))
-print(np.linalg.norm(x) == laff_norm2(x))
+print(norm2(x))
+print(np.linalg.norm(x) == norm2(x))

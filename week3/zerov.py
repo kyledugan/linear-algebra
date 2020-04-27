@@ -1,6 +1,6 @@
 import numpy as np
 
-def laff_zerov(m):
+def zerov(m):
     if len(m.shape) < 2:
         rows = 1
         columns = m.shape[0]
@@ -12,4 +12,4 @@ def laff_zerov(m):
             m[i][j] = 0
     return m
 
-# print(laff_zerov(np.array([[3,1,1],[2,1,1]])))
+# print(zerov(np.array([[3,1,1],[2,1,1]])))

@@ -1,6 +1,6 @@
 import numpy as np
 
-def laff_dot(x,y):
+def dot(x,y):
     # check that 2D arrays are passed in
     if len(x.shape) != 2 or len(y.shape) != 2:
         return 'FAILED'
@@ -36,4 +36,4 @@ f1 = np.array([[4,5,6], [-1,-2,-3]])
 f2 = np.array([[4,5]])
 y = np.array([[7],[8],[9]])
 z = np.array([[10], [11], [12]])
-# print(laff_dot(x,f1))
+# print(dot(x,f1))

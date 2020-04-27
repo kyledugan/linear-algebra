@@ -1,6 +1,6 @@
 import numpy as np
 
-def laff_transpose(A):
+def transpose(A):
     # check for 2x2 array
     if len(A.shape) != 2:
         return "FAILED"
@@ -13,4 +13,4 @@ def laff_transpose(A):
     return B
 
 A = np.array([[1,2,3,4],[4,5,6,7],[7,8,9,10]])
-print(laff_transpose(A))
+# print(transpose(A))

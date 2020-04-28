@@ -31,9 +31,6 @@ def dot(x,y):
 
     return dot
 
-x = np.array([[1,2,3]])
-f1 = np.array([[4,5,6], [-1,-2,-3]])
-f2 = np.array([[4,5]])
-y = np.array([[7],[8],[9]])
-z = np.array([[10], [11], [12]])
-# print(dot(x,f1))
+x = np.array([[1]])
+y = np.array([[-1]])
+# print(dot(x,y))

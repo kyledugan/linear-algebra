@@ -11,7 +11,7 @@ def matrix_vector_mult(A,x,y):
     if y.shape[1] != 1 or x.shape[1] != 1:
         return "FAILED"
     # check that inputs have compatible dimensions
-    if y.shape[0] != x.shape[0] or A.shape[1] != x.shape[0]:
+    if y.shape[0] != A.shape[0] or A.shape[1] != x.shape[0]:
         return "FAILED"
 
     for i in range(A.shape[0]):
@@ -19,7 +19,7 @@ def matrix_vector_mult(A,x,y):
     
     return y
 
-A = np.array([[-1, 0, 2], [2, -1, 1], [3, 1, -1]])
-x = np.array([[-1], [2], [1]])
-y = np.array([[1], [1], [1]])
-print(matrix_vector_mult(A,x,y))
+A = np.array([[2,0,1],[1,1,0],[2,0,1],[1,1,0]])
+x = np.array([[-1],[1],[1]])
+y = np.array([[0], [0], [0], [0]])
+# print(matrix_vector_mult(A,x,y))

@@ -15,4 +15,5 @@ def gaussian_elimination(A):
     return A
 
 A = np.array([[2,0,1,2], [-2,-1,1,-1], [4,-1,5,4], [-4,1,-3,-8]])
+# A = np.array([[1,-2,2], [5,-15,8], [-2,-11,-11]])
 # print(gaussian_elimination(A))

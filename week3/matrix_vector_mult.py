@@ -19,7 +19,9 @@ def matrix_vector_mult(A,x,y):
     
     return y
 
-A = np.array([[2,0,1],[1,1,0],[2,0,1],[1,1,0]])
-x = np.array([[-1],[1],[1]])
+# A = np.array([[2,0,1],[1,1,0],[2,0,1],[1,1,0]])
+# x = np.array([[-1],[1],[1]])
+A = np.array([[2,0,1,2], [-2,-1,1,-1], [4,-1,5,4], [-4,1,-3,-8]])
+x = np.array([[1], [-1], [2], [-1]])
 y = np.array([[0], [0], [0], [0]])
-# print(matrix_vector_mult(A,x,y))
+print(matrix_vector_mult(A,x,y))

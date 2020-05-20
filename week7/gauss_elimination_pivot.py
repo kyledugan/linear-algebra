@@ -20,8 +20,7 @@ def gauss_elimination_pivot(A):
                     A[j,:] = tmp
                     break
             if A[i,i] == 0: 
-                # all 0s in current column => skip to next column
-                continue
+                return "FAILED - 0 or infinite solutions"
         else:
             p[i,0] = i
         A[i+1:,i] /= A[i,i]

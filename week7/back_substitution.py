@@ -13,4 +13,5 @@ def back_substitution(A, b):
         for j in range(i+1, A.shape[0]):
             div -= A[i,j] * b[j,0]
         b[i,0] = div / A[i,i]
+        
     return b

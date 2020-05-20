@@ -12,7 +12,7 @@ def matrix_matrix_mult_columns(A,B,C):
         C[:,[i]] += matrix_vector_mult(A, np.array(B[:,[i]]), np.array(C[:,[i]]))
     return C
 
-A = np.array([[1,2,3],[4,5,6],[7,8,9],[0,-5,-2]])
-B = np.array([[2,3], [4,5], [0,1]])
-C = np.array([[0,0], [0,0], [0,0], [0,0]])
+A = np.array([[-2,1,2],[3,2,1],[-1,0,-3]])
+B = np.array([[-1,-2,3], [0,1,2], [-3,2,1]])
+C = np.array([[0,0,0], [0,0,0], [0,0,0]])
 print(matrix_matrix_mult_columns(A,B,C))

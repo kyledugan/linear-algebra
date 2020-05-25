@@ -4,7 +4,7 @@ sys.path.append('../week3')
 from matrix_vector_mult import matrix_vector_mult
 
 def matrix_matrix_mult_columns(A,B):
-    res = np.zeros((A.shape[0], A.shape[1]))
+    res = np.zeros((A.shape[0], B.shape[1]))
     if len(A.shape) != 2 or len(B.shape) != 2:
         return "FAILED"
     if A.shape[1] != B.shape[0]:
@@ -14,6 +14,6 @@ def matrix_matrix_mult_columns(A,B):
 
     return res
 
-# A = np.array([[-2,1,2],[3,2,1],[-1,0,-3]])
-# B = np.array([[-1,-2,3], [0,1,2], [-3,2,1]])
+# A = np.array([[1,0,1],[0,1,-2],[0,0,1]])
+# B = np.array([[-2,0,-1,1],[0,-1,2,4],[0,0,1,1]])
 # print(matrix_matrix_mult_columns(A,B))

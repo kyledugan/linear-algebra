@@ -24,7 +24,7 @@ def gauss_jordan_elimination(A, b):
 
     # solve for b
     for i in range(A.shape[0]):
-        b[i,0] /= A[i,i]
+        b[i,:] /= A[i,i]
 
     return b
 

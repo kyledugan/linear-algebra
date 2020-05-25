@@ -17,17 +17,15 @@ def gauss_jordan_elimination(A, b):
         for j in range(A.shape[0]):
             if i != j:
                 P[j,i] = -A[j,i] / A[i,i]
+            else:
+                P[j,i] = 1 / A[i,i]
 
         # update appended matrix
         A = matrix_matrix_mult_columns(P, A)
         b = matrix_matrix_mult_columns(P, b)
 
-    # solve for b
-    for i in range(A.shape[0]):
-        b[i,:] /= A[i,i]
-
     return b
 
-A = np.array([[-2,2,-5], [2,-3,7], [-4, 3, -7]])
-b = np.array([[-7, 8], [11, -13], [-9, 9]])
-print(gauss_jordan_elimination(A, b))
+# A = np.array([[3,2,10],[-3,-3,-14],[3,1,4]])
+# b = np.array([[-7,16], [9,-25], [-5,3]])
+# print(gauss_jordan_elimination(A, b))

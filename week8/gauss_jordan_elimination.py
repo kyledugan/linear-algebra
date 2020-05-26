@@ -12,13 +12,29 @@ def gauss_jordan_elimination(A, b):
         return "FAILED"
 
     for i in range(A.shape[0]):
-        # construct pivot matrix
+        # construct elimination matrix
         P = np.identity(A.shape[0])
         for j in range(A.shape[0]):
+            if A[i,i] == 0:
+                for k in range(i+1, A.shape[0]):
+                    if A[k,i] != 0:
+                        # pivot A
+                        tmpA = A[i,:].copy()
+                        A[i,:] = A[k,:]
+                        A[k,:] = tmpA
+
+                        # pivot b
+                        tmpB = b[i,:].copy()
+                        b[i,:] = b[k,:]
+                        b[k,:] = tmpB
+
+                if A[i,i] == 0:
+                    return "FAILED - matrix is singular"
+
             if i != j:
-                P[j,i] = -A[j,i] / A[i,i]
+                P[j,i] = -A[j,i] / float(A[i,i])
             else:
-                P[j,i] = 1 / A[i,i]
+                P[j,i] = 1 / float(A[i,i])
 
         # update appended matrix
         A = matrix_matrix_mult_columns(P, A)
@@ -26,6 +42,6 @@ def gauss_jordan_elimination(A, b):
 
     return b
 
-# A = np.array([[3,2,10],[-3,-3,-14],[3,1,4]])
-# b = np.array([[-7,16], [9,-25], [-5,3]])
+# A = np.array([[2,4,-2], [4,8,6], [-2,0,5]])
+# b = np.array([[3],[15],[14]])
 # print(gauss_jordan_elimination(A, b))
